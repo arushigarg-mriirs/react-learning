@@ -8,11 +8,11 @@
 }
 
 .color-light {
-  color: black;
+  color: black !important;
 }
 
 .color-dark {
-  color: white
+  color: white !important;
 }
 
 .color-box {

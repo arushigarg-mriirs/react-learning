@@ -1,27 +1,28 @@
 import React from "react";
+import "../App.css";
 
 export default function About(props) {
-  let myStyle = {
-    color: props.mode === "dark" ? "white" : "black",
-    backgroundColor: props.mode === "dark" ? "rgb(52, 58, 64)" : "white",
-  };
+  let myClass =
+    props.mode === "light" ? "bg-light color-light" : "bg-dark color-dark";
 
   return (
-    <div className="container" style={myStyle}>
-      <h1 className="my-2">About Us</h1>
+    <div
+      className="container"
+      style={{ color: props.mode === "dark" ? "white" : "#042743" }}
+    >
+      <h1 className="my-2">{props.heading}</h1>
       <div className="accordion mt-3" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
-              style={myStyle}
-              className="accordion-button"
+              className={`accordion-button ${myClass}`}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              <strong>John Doe</strong>
+              <strong>Analyze Your text</strong>
             </button>
           </h2>
           <div
@@ -29,26 +30,24 @@ export default function About(props) {
             className="accordion-collapse collapse show"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body" style={myStyle}>
-              John is a frontend Developer with 4 years of experience in Angular
-              and is on learning journey to become a react developer as well. In
-              fututre she wishes to be a full stack developer -&gt; MERN and
-              MEAN both
+            <div className={`accordion-body ${myClass}`}>
+              Textutils gives you a way to analyze your text quickly and
+              efficiently. Be it word count, character count or manipulating the
+              text.
             </div>
           </div>
         </div>
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
-              style={myStyle}
-              className="accordion-button collapsed"
+              className={`accordion-button collapsed ${myClass}`}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              <strong>Rachel Green</strong>
+              <strong>Free to use </strong>
             </button>
           </h2>
           <div
@@ -56,24 +55,25 @@ export default function About(props) {
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body" style={myStyle}>
-              Rachel is a fashion enthusiast that currently serves coffee. Sad I
-              know, but future has an interesting way of twisting the way.
+            <div className={`accordion-body ${myClass}`}>
+              TextUtils is a free character counter tool that provides instant
+              character count & word count statistics for a given text.
+              TextUtils reports the number of words and characters. Thus it is
+              suitable for writing text with word/ character limit.
             </div>
           </div>
         </div>
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
-              style={myStyle}
-              className="accordion-button collapsed"
+              className={`accordion-button collapsed ${myClass}`}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              <strong>Ross Geller</strong>
+              <strong>Browser Compatible</strong>
             </button>
           </h2>
           <div
@@ -81,9 +81,11 @@ export default function About(props) {
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body" style={myStyle}>
-              Ross is a paleontologist, scientist and a professor. He has been
-              divorced thrice.
+            <div className={`accordion-body ${myClass}`}>
+              This word counter software works in any web browsers such as
+              Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to
+              count characters in facebook, blog, books, excel document, pdf
+              document, essays, etc.
             </div>
           </div>
         </div>
